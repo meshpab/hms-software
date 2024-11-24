@@ -66,9 +66,7 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`id`, `doctorSpecialization`, `doctorId`, `userId`, `consultancyFees`, `appointmentDate`, `appointmentTime`, `postingDate`, `userStatus`, `doctorStatus`, `updationDate`) VALUES
-(1, 'ENT', 1, 1, 500, '2022-11-10', '12:45 PM', '2022-11-06 12:21:48', 1, 0, '2022-11-06 12:23:35'),
-(2, 'ENT', 1, 2, 500, '2022-11-17', '7:00 PM', '2022-11-06 13:16:18', 1, 1, NULL),
-(3, 'ENT', 1, 3, 1000, '2024-05-13', '5:15 PM', '2024-05-12 11:43:31', 0, 1, '2024-05-12 11:44:33');
+
 
 -- --------------------------------------------------------
 
@@ -94,8 +92,6 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`, `contactno`, `docEmail`, `password`, `creationDate`, `updationDate`) VALUES
-(1, 'ENT', 'Lakshay Dhoundiyal', 'R.K Puram, New Delhi', '1000', 9560547779, 'lakshay22dhoundiyal@gmail.com', 'acc97a2dd7c0a52f503118eb7fb3f1ef', '2022-10-30 18:16:52', '2024-05-12 11:42:56'),
-(2, 'Endocrinologists', 'Charu Dua', 'X 1212 ABC Apartment Laxmi Nagar New Delhi ', '800', 1231231230, 'charudua12@test.com', 'f925916e2754e5e03f75dd58a5733251', '2022-11-04 01:06:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -118,19 +114,6 @@ CREATE TABLE `doctorslog` (
 --
 
 INSERT INTO `doctorslog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`, `status`) VALUES
-(20, NULL, 'gfdgdf', 0x3a3a3100000000000000000000000000, '2022-11-04 01:02:16', NULL, 0),
-(21, 2, 'charudua12@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 11:59:40', '06-11-2022 05:35:18 PM', 1),
-(22, 2, 'charudua12@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 12:06:37', '06-11-2022 05:36:40 PM', 1),
-(23, 2, 'charudua12@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 12:08:56', '06-11-2022 05:42:53 PM', 1),
-(24, 1, 'anujk123@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 12:23:18', '06-11-2022 05:53:40 PM', 1),
-(25, 2, 'charudua12@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 13:16:53', '06-11-2022 06:47:07 PM', 1),
-(26, 1, 'anujk123@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 13:17:33', '06-11-2022 06:50:28 PM', 1),
-(27, NULL, 'lakshay22dhoundiyal@gmail.com', 0x3a3a3100000000000000000000000000, '2024-05-12 11:22:33', NULL, 0),
-(28, NULL, 'Lakshay Dhoundiyal', 0x3a3a3100000000000000000000000000, '2024-05-12 11:22:49', NULL, 0),
-(29, NULL, 'Lakshay Dhoundiyal', 0x3a3a3100000000000000000000000000, '2024-05-12 11:24:06', NULL, 0),
-(30, NULL, 'Lakshay', 0x3a3a3100000000000000000000000000, '2024-05-12 11:24:24', NULL, 0),
-(31, 1, 'lakshay22dhoundiyal@gmail.com', 0x3a3a3100000000000000000000000000, '2024-05-12 11:24:55', '12-05-2024 04:55:16 PM', 1),
-(32, 1, 'lakshay22dhoundiyal@gmail.com', 0x3a3a3100000000000000000000000000, '2024-05-12 11:46:26', '12-05-2024 05:20:48 PM', 1);
 
 -- --------------------------------------------------------
 
@@ -189,7 +172,7 @@ CREATE TABLE `tblcontactus` (
 --
 
 INSERT INTO `tblcontactus` (`id`, `fullname`, `email`, `contactno`, `message`, `PostingDate`, `AdminRemark`, `LastupdationDate`, `IsRead`) VALUES
-(3, 'Lakshay Dhoundiyal', 'lakshay22dhoundiyal@gmail.com', 9560547779, 'Testing Message', '2024-05-12 11:36:50', 'Working', '2024-05-12 11:51:50', 1);
+
 
 -- --------------------------------------------------------
 
@@ -265,8 +248,6 @@ CREATE TABLE `tblpatient` (
 --
 
 INSERT INTO `tblpatient` (`ID`, `Docid`, `PatientName`, `PatientContno`, `PatientEmail`, `PatientGender`, `PatientAdd`, `PatientAge`, `PatientMedhis`, `CreationDate`, `UpdationDate`) VALUES
-(1, 1, 'Amit Kumar', 1231231230, 'amitk@gmail.com', 'male', 'New Delhi india', 35, 'NA', '2022-11-06 13:18:31', NULL),
-(2, 1, 'Ekta Arora', 8512041585, 'ekta.arora.2512@gmail.com', 'female', 'Subhash Nagar, New Delhi', 20, 'Head is oversized', '2024-05-12 11:49:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -289,11 +270,6 @@ CREATE TABLE `userlog` (
 --
 
 INSERT INTO `userlog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`, `status`) VALUES
-(1, 1, 'johndoe12@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 12:14:11', NULL, 1),
-(2, 1, 'johndoe12@test.com', 0x3a3a3100000000000000000000000000, '2022-11-06 12:21:20', '06-11-2022 05:53:00 PM', 1),
-(3, NULL, 'amitk@gmail.com', 0x3a3a3100000000000000000000000000, '2022-11-06 13:15:43', NULL, 0),
-(4, 2, 'amitk@gmail.com', 0x3a3a3100000000000000000000000000, '2022-11-06 13:15:58', '06-11-2022 06:50:46 PM', 1),
-(5, 3, 'ekta.arora.2512@gmail.com', 0x3a3a3100000000000000000000000000, '2024-05-12 11:39:15', '12-05-2024 05:15:51 PM', 1);
 
 -- --------------------------------------------------------
 
@@ -318,10 +294,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `password`, `regDate`, `updationDate`) VALUES
-(2, 'Amit kumar', 'new Delhi india', 'New Delhi', 'male', 'amitk@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2022-11-06 13:15:32', NULL),
-(3, 'Ekta Arora', 'Subhash Nagar', 'New Delhi', 'female', 'ekta.arora.2512@gmail.com', '2993ebee8bb717c984d9805fd9cda8f3', '2024-05-12 11:38:46', NULL);
 
---
 -- Indexes for dumped tables
 --
 
